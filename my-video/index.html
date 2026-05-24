@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1920, height=1080" />
-    <title>Product Promo</title>
+    <title>Upper Dolpa Episode 1</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=block"
@@ -33,7 +33,7 @@
       }
       .caption-text-wrapper {
         position: absolute;
-        bottom: 150px;
+        bottom: 110px;
         left: 0;
         right: 0;
         display: flex;
@@ -44,13 +44,14 @@
       }
       .caption-line {
         color: white;
-        font-size: 48px;
+        font-size: 42px;
         font-weight: 600;
         letter-spacing: -0.02em;
         text-align: center;
-        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75);
         transform: translateY(100%);
         opacity: 0;
+        max-width: 1300px;
       }
     </style>
   </head>
@@ -59,44 +60,126 @@
       id="root"
       data-composition-id="main"
       data-start="0"
-      data-duration="20"
+      data-duration="30"
       data-width="1920"
       data-height="1080"
     >
-      <!-- Scene 1: Logo Intro -->
+
       <div
         id="scene-1"
         class="scene"
         data-composition-id="scene1-logo-intro"
         data-composition-src="compositions/scene1-logo-intro.html"
         data-start="0"
-        data-duration="1.5"
+        data-duration="3"
         data-track-index="1"
         data-width="1920"
         data-height="1080"
       ></div>
 
-      <!-- Scene 2-4: Continuous Canvas -->
       <div
-        id="scene-2-4"
+        id="scene-2"
         class="scene"
-        data-composition-id="scene2-4-canvas"
-        data-composition-src="compositions/scene2-4-canvas.html"
-        data-start="1.5"
-        data-duration="12.5"
+        data-composition-id="scene2-family-home-fire"
+        data-composition-src="compositions/scene2-family-home-fire.html"
+        data-start="3"
+        data-duration="3"
         data-track-index="1"
         data-width="1920"
         data-height="1080"
       ></div>
 
-      <!-- Scene 5: Logo Outro -->
+      <div
+        id="scene-3"
+        class="scene"
+        data-composition-id="scene3-tashi-wakes-up"
+        data-composition-src="compositions/scene3-tashi-wakes-up.html"
+        data-start="6"
+        data-duration="3"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="scene-4"
+        class="scene"
+        data-composition-id="scene4-morning-village"
+        data-composition-src="compositions/scene4-morning-village.html"
+        data-start="9"
+        data-duration="3"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
       <div
         id="scene-5"
         class="scene"
-        data-composition-id="scene5-logo-outro"
-        data-composition-src="compositions/scene5-logo-outro.html"
-        data-start="14"
-        data-duration="6"
+        data-composition-id="scene5-tashi-norbu-yak"
+        data-composition-src="compositions/scene5-tashi-norbu-yak.html"
+        data-start="12"
+        data-duration="3"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="scene-6"
+        class="scene"
+        data-composition-id="scene6-ancient-monastery"
+        data-composition-src="compositions/scene6-ancient-monastery.html"
+        data-start="15"
+        data-duration="3"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="scene-7"
+        class="scene"
+        data-composition-id="scene7-night-family-storm"
+        data-composition-src="compositions/scene7-night-family-storm.html"
+        data-start="18"
+        data-duration="3"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="scene-8"
+        class="scene"
+        data-composition-id="scene8-glowing-mountain"
+        data-composition-src="compositions/scene8-glowing-mountain.html"
+        data-start="21"
+        data-duration="3"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="scene-9"
+        class="scene"
+        data-composition-id="scene9-final-mountain"
+        data-composition-src="compositions/scene9-final-mountain.html"
+        data-start="24"
+        data-duration="3"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <div
+        id="scene-10"
+        class="scene"
+        data-composition-id="scene10-post-credit-hook"
+        data-composition-src="compositions/scene10-post-credit-hook.html"
+        data-start="27"
+        data-duration="3"
         data-track-index="1"
         data-width="1920"
         data-height="1080"
@@ -106,14 +189,14 @@
       <div
         id="captions-comp"
         data-composition-id="captions"
-        data-start="1.5"
-        data-duration="12.5"
+        data-start="3"
+        data-duration="24"
         data-track-index="2"
         data-width="1920"
         data-height="1080"
       >
         <div class="caption-text-wrapper">
-          <div id="caption-text" class="caption-line">Starting with a blank canvas.</div>
+          <div id="caption-text" class="caption-line">Above the clouds… beyond the last roads of Nepal…</div>
         </div>
 
         <script>
@@ -121,18 +204,23 @@
             const tl = gsap.timeline({ paused: true });
             const text = document.querySelector("#caption-text");
 
-            tl.to(text, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 0);
-            tl.to(text, { opacity: 0, y: -20, duration: 0.3, ease: "power3.in" }, 3.2);
-            tl.set(text, { innerText: "Three cursors. One file. Zero meetings.", y: 40 }, 3.5);
-            tl.to(text, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 3.5);
-            tl.to(text, { opacity: 0, y: -20, duration: 0.3, ease: "power3.in" }, 7.7);
-            tl.set(
-              text,
-              { innerText: "Components in. Feedback resolved. No one waited.", y: 40 },
-              8.0,
-            );
-            tl.to(text, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 8.0);
-            tl.to(text, { opacity: 0, y: -20, duration: 0.4, ease: "power3.in" }, 12.1);
+            const captions = [
+              [0, "Above the clouds… beyond the last roads of Nepal…"],
+              [3, "Tashi… even the mountains woke before you today."],
+              [6, "The mountain only respects people who respect it first."],
+              [9, "One day, Norbu… we will see what is beyond those mountains."],
+              [12, "Curious hearts often walk dangerous paths."],
+              [15, "Spirits live in the mountains only for those who listen carefully."],
+              [18, "What are you…?"],
+              [21, "That night… the mountains whispered back."],
+              [24, "Something was watching from the storm."]
+            ];
+
+            captions.forEach(([time, caption]) => {
+              tl.set(text, { innerText: caption, y: 44 }, time);
+              tl.to(text, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, time);
+              tl.to(text, { opacity: 0, y: -20, duration: 0.3, ease: "power3.in" }, time + 2.35);
+            });
 
             window.__timelines = window.__timelines || {};
             window.__timelines["captions"] = tl;
@@ -144,14 +232,6 @@
     <script>
       window.__timelines = window.__timelines || {};
       const mainTl = gsap.timeline({ paused: true });
-
-      mainTl.set("#scene-2-4", { scale: 1, filter: "blur(0px)" }, 1.5);
-      mainTl.to(
-        "#scene-2-4",
-        { duration: 0.25, scale: 0.94, filter: "blur(6px)", opacity: 0, ease: "power2.in" },
-        13.75,
-      );
-
       window.__timelines["main"] = mainTl;
     </script>
   </body>
